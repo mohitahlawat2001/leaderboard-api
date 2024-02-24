@@ -7,6 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000; 
 
 const dotenv = require('dotenv');
+const path = require('path');
 dotenv.config();
 
 
@@ -30,6 +31,8 @@ app.get('/current-week-leaderboard', async (_, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+
 
 // API for last week leaderboard by country
 app.get('/last-week-leaderboard/:country', async (req, res) => {
@@ -58,10 +61,18 @@ app.get('/user-rank/:userId', async (req, res) => {
   }
 });
 
+// make root to direct a home page to the API documentation and usage button 
+app.get('/', (req, res) => {
+  // Replace 'index.html' with the actual filename and path
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+
 // handle invalid routes
 app.use((_, res) => {
   res.status(404).json({ error: 'Not Found' });
 });
+
 
 
 app.listen(port, () => {

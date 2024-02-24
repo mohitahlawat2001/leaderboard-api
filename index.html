@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>leaderboard - API Documentation and Usage</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="container-fluid bg-dark text-white p-3">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1>Leaderboard API</h1>
+            <p>Fetch leaderboard data and explore API usage.</p>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end">
+            <a href="https://github.com/mohitahlawat2001/leaderboard-api/blob/main/README.md" class="btn btn-primary me-2">Documentation</a>
+            <a href="https://github.com/mohitahlawat2001/leaderboard-api/issues" class="btn btn-secondary">Support</a>
+          </div>
+        </div>
+      </header>
+  <main class="container mt-5">
+    <section id="overview">
+      <h2>API Overview</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Display current week leaderboard (Top 200)</li>
+        <li class="list-group-item">Display last week leaderboard given a country by the user (Top 200)</li>
+        <li class="list-group-item">Fetch user rank, given the userId.</li>
+      </ul>
+    </section>
+    <section id="getting-started">
+      <h2>Getting Started</h2>
+      <p>Follow these steps to easily integrate with our API:</p>
+      <ol class="list-group list-group-flush">
+        </ol>
+    </section>
+    <section id="endpoints">
+      <h2>Available Endpoints</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+            <th>Examples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GET</td>
+            <td>/current-week-leaderboard</td>
+            <td>Retrieve the current week's leaderboard</td>
+            <td><a href="https://leaderboard-api-0eat.onrender.com/current-week-leaderboard">Link to api</a></td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/last-week-leaderboard/:country</td>
+            <td>Retrieve the last week's leaderboard by country</td>
+            <td><a href="https://leaderboard-api-0eat.onrender.com/last-week-leaderboard/IN">Link to api</a></td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/user-rank/:userId</td>
+            <td>Retrieve the user's rank</td>
+            <td><a href="https://leaderboard-api-0eat.onrender.com/user-rank/161">Link to api</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="resources">
+        <h2>Additional Resources</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Detailed API documentation: <a href="https://github.com/mohitahlawat2001/leaderboard-api/blob/main/README.md">Link to documentation page</a></li>
+          <li class="list-group-item">Community forum/support: <a href="https://github.com/mohitahlawat2001/leaderboard-api/issues">Link to forum/support page</a></li>
+          <li class="list-group-item">Contact information: <a href="mailto:your-email@example.com">Email address</a></li>
+        </ul>
+      </section>
+  </main>
+  <footer class="container-fluid bg-dark text-white py-3">
+    <div class="container">
+      <p>&copy; 2024 leaderboard</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
